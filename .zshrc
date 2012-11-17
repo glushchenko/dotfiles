@@ -25,6 +25,7 @@ setopt AUTO_CD              # why would you type 'cd dir' if you could just type
 setopt CORRECT              # Spell check commands!  (Sometimes annoying)
 setopt PUSHD_TO_HOME        # blank pushd goes to home
 setopt NUMERIC_GLOB_SORT    # sort by numeric method
+setopt GLOB_COMPLETE        # completion in scp ex.
 
 # Key bindings
 bindkey "^[[H" beginning-of-line    # fn+left
@@ -33,10 +34,17 @@ bindkey "\e[3~" delete-char         # fn+return
 bindkey "\e\e[D" backward-word      # alt+left
 bindkey "\e\e[C" forward-word       # alt+right
 
+##
 # Autocomplete SSH hosts
-zstyle -s ':completion:*:hosts' hosts _ssh_config
-[[ -r ~/.ssh/config ]] && _ssh_config+=($(cat ~/.ssh/config | sed -ne 's/Host[=\t ]//p'))
-zstyle ':completion:*:hosts' hosts $_ssh_config
+##
+
+# ~/.ssh/config
+if [ -f ~/.ssh/config ]; then
+    zstyle -e ':completion:*:hosts' hosts "_ssh_config+=($(cat ~/.ssh/config | sed -ne 's/Host[=\t ]//p'))"
+fi
+
+# /etc/ssh_hosts, ~/.ssh/known_hosts
+zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 # Case-insensitive (all),partial-word and then substring completion
 if [ "x$CASE_SENSITIVE" = "xtrue" ]; then
