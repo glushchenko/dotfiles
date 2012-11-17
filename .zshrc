@@ -19,7 +19,7 @@ colors
 compinit
 
 # PROMPT
-PS1="%{$fg[green]%}%n%{$reset_color%}@%{$fg_bold[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$ "
+PS1="%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$ "
 
 setopt AUTO_CD              # why would you type 'cd dir' if you could just type 'dir'?
 setopt CORRECT              # Spell check commands!  (Sometimes annoying)
