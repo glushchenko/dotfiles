@@ -7,6 +7,7 @@ export EDITOR="vim"
 
 # Aliases
 alias ls='ls -vFlaG'
+alias sn="osascript -e 'tell application \"Caffeine\" to turn off'; pmset sleepnow"
 
 # ENV if exist
 if [[ -r ~/.zshenv ]]; then
