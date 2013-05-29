@@ -31,7 +31,7 @@ if &term =~ "xterm.*"
     cmap <Esc>[201~ <nop>
 endif
 
-" ====================== spell | os x (ctrl + F11) 
+" ====================== spell (ctrl + F11) 
 if version >= 700
     setlocal spell spelllang=
     setlocal nospell
@@ -53,5 +53,5 @@ if version >= 700
     map <F11> <Esc>:call ChangeSpellLang()<CR>
 endif
 
-" ======================= markdown
+" ====================== markdown
 let g:vim_markdown_folding_disabled=1
