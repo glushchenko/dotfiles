@@ -1,0 +1,2 @@
+1) git clone https://github.com/plasticboy/vim-markdown.git
+2) :setlocal spell spelllang=ru
