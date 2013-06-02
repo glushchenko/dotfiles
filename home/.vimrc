@@ -55,3 +55,9 @@ endif
 
 " ====================== markdown
 let g:vim_markdown_folding_disabled=1
+
+" ====================== autocmd
+if has("autocmd")
+    autocmd BufNewFile,BufRead *.markdown set wrap
+endif
+
