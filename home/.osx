@@ -1,3 +1,6 @@
+# change shell
+chsh -s /bin/zsh
+
 # en-US localization for Safari.app
 defaults write com.apple.Safari AppleLanguages '("en-US")'
 
