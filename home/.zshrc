@@ -8,6 +8,7 @@ export EDITOR="vim"
 # Aliases
 alias ls='ls -vFlaG'
 alias sn="osascript -e 'tell application \"Caffeine\" to turn off'; pmset sleepnow"
+alias go='ssh ripley.fluder.co "cat /var/log/nginx/fluder.co.access.log" | goaccess'
 
 # ENV if exist
 if [[ -r ~/.zshenv ]]; then
@@ -54,3 +55,8 @@ if [ "x$CASE_SENSITIVE" = "xtrue" ]; then
 else
     zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 fi
+
+# autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

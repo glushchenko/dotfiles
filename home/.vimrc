@@ -1,5 +1,8 @@
 call pathogen#infect()	"bundles by dir
 
+let g:rusmode_normal_layout='English - Ilya Birman Typography'
+let g:rusmode_autotoggle_insertleave=0
+
 " ====================== beahavior
 filetype plugin on      "load modules by file types
 filetype indent on	    "indent by file types
