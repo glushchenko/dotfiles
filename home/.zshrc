@@ -8,7 +8,7 @@ export EDITOR="vim"
 # Aliases
 alias ls='ls -vFlaG'
 alias sn="osascript -e 'tell application \"Caffeine\" to turn off'; pmset sleepnow"
-alias go='ssh ripley.fluder.co "cat /var/log/nginx/fluder.co.access.log" | goaccess'
+alias go="ssh -t ripley.fluder.co 'goaccess -f /var/log/nginx/fluder.co.access.log'"
 
 # ENV if exist
 if [[ -r ~/.zshenv ]]; then
