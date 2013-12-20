@@ -9,6 +9,8 @@ export EDITOR="vim"
 alias ls='ls -vFlaG'
 alias sn="osascript -e 'tell application \"Caffeine\" to turn off'; pmset sleepnow"
 alias go="ssh -t ripley.fluder.co 'goaccess -f /var/log/nginx/fluder.co.access.log'"
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim' # +clipboard
+alias c='cal_head=`cal | head -1`; cal_tail=`cal | tail -7`; today=`date "+%e"`; echo "$cal_head"; echo -en "${cal_tail/${today}/\033[1;32m${today}\033[0m}";'
 
 # ENV if exist
 if [[ -r ~/.zshenv ]]; then
@@ -59,4 +61,8 @@ fi
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# use osx clipboard
+set clipboard=unnamed
+
+# include iterm config
+source ~/.zsh/iterm2.zsh

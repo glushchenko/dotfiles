@@ -1,4 +1,19 @@
-call pathogen#infect()	"bundles by dir
+set nocompatible              " be iMproved
+filetype off                  " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Add vundle to update it like any other bundle
+Bundle 'gmarik/vundle'
+
+" Theme
+Bundle 'altercation/vim-colors-solarized'
+
+" Cursor pipe on insert mode
+Bundle 'sjl/vitality.vim'
+
+"call pathogen#infect()	"bundles by dir
 
 " ====================== beahavior
 filetype plugin on      "load modules by file types
@@ -6,15 +21,24 @@ filetype indent on	    "indent by file types
 set tabstop=4           " 1tab = 4space
 set shiftwidth=4        " 1shift (>>) = 4space
 set autoindent          "same indent as previous line
-set expandtab           "spaces instead tabs
+"set expandtab           "spaces instead tabs
 set hidden              "hidden buffer instead close
 
 " ====================== visual
 syntax on	            "syntax highlighter
+
 set number              "line numbers
 set nowrap              "no wrap long lines
 set visualbell          "beep by flashing the screen
 set ruler               "line status
+
+" ====================== themes
+if has('gui_running')
+    set background=light
+    colorscheme solarized
+else
+    set background=dark
+endif
 
 " ====================== auto paste
 if &term =~ "xterm.*"
@@ -61,3 +85,10 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.markdown set wrap
 endif
 
+" ====================== Keyboard Layout Switcher
+let g:kls_defaultInputSourceIndex = 6
+let g:kls_insertEnterRestoresLast = 1
+
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·
+set list

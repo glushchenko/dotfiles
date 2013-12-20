@@ -1,3 +1,6 @@
+# disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
 # change shell
 chsh -s /bin/zsh
 
