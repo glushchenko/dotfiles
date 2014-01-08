@@ -1,0 +1,34 @@
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+	brew cask install "${@}" 2> /dev/null
+}
+
+installcask appcleaner
+installcask dropbox
+installcask firefox
+installcask f-lux
+installcask github
+installcask google-chrome
+installcask imageoptim
+installcask instacast
+installcask iterm2
+installcask keyboard-maestro
+installcask little-snitch
+installcask macvim
+installcask plex-media-server
+installcask sequel-pro
+installcask shiftit
+installcask shiori
+installcask shortcat
+installcask skype
+installcask steam
+installcask taskpaper
+installcask teamviewer
+installcask textexpander
+installcask the-unarchiver
+installcask transmission
+installcask virtualbox
+installcask vlc
