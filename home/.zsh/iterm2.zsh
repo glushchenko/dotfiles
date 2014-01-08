@@ -26,6 +26,5 @@ color-ssh() {
     fi
     ssh $*
 }
-compdef _ssh color-ssh=ssh
  
 alias ssh=color-ssh

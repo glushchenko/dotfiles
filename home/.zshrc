@@ -2,7 +2,10 @@ export LANG=ru
 export LC_ALL=ru_RU.UTF-8
 export EDITOR="vim"
 
-autoload -U colors zcalc compinit colors compinit
+autoload -U colors zcalc compinit 
+
+colors 
+compinit
 
 PS1="%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$ "
 
