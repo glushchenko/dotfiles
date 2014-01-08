@@ -13,6 +13,14 @@ Bundle 'altercation/vim-colors-solarized'
 " Cursor pipe on insert mode
 Bundle 'sjl/vitality.vim'
 
+" Most recently used
+Bundle 'yegappan/mru'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle 'm2mdas/phpcomplete-extended'
+
+
 "call pathogen#infect()	"bundles by dir
 
 " ====================== beahavior
@@ -23,6 +31,7 @@ set shiftwidth=4        " 1shift (>>) = 4space
 set autoindent          "same indent as previous line
 "set expandtab           "spaces instead tabs
 set hidden              "hidden buffer instead close
+set clipboard=unnamed	" copy paste tmux
 
 " ====================== visual
 syntax on	            "syntax highlighter
@@ -92,3 +101,14 @@ let g:kls_insertEnterRestoresLast = 1
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·
 set list
+
+" tmux arrows working properly
+if &term =~ '^screen'
+	" tmux will send xterm-style keys when xterm-keys is on
+	execute "set <xUp>=\e[1;*A"
+	execute "set <xDown>=\e[1;*B"
+	execute "set <xRight>=\e[1;*C"
+	execute "set <xLeft>=\e[1;*D"
+endif
+
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
