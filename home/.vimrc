@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
+" ======================
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -15,13 +16,14 @@ Bundle 'sjl/vitality.vim'
 
 " Most recently used
 Bundle 'yegappan/mru'
+
+" Autocomplete
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/unite.vim'
-Bundle 'm2mdas/phpcomplete-extended'
 
-
-"call pathogen#infect()	"bundles by dir
+" Markdown syntax
+Bundle 'plasticboy/vim-markdown'
 
 " ====================== beahavior
 filetype plugin on      "load modules by file types
@@ -94,15 +96,11 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.markdown set wrap
 endif
 
-" ====================== Keyboard Layout Switcher
-let g:kls_defaultInputSourceIndex = 6
-let g:kls_insertEnterRestoresLast = 1
-
-" Show “invisible” characters
+" ====================== Show “invisible” characters
 set lcs=tab:▸\ ,trail:·
 set list
 
-" tmux arrows working properly
+" ====================== tmux arrows working properly
 if &term =~ '^screen'
 	" tmux will send xterm-style keys when xterm-keys is on
 	execute "set <xUp>=\e[1;*A"
@@ -111,4 +109,4 @@ if &term =~ '^screen'
 	execute "set <xLeft>=\e[1;*D"
 endif
 
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
