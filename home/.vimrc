@@ -1,29 +1,17 @@
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-" ======================
+" ====================== vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" Add vundle to update it like any other bundle
 Bundle 'gmarik/vundle'
-
-" Theme
-Bundle 'altercation/vim-colors-solarized'
-
-" Cursor pipe on insert mode
-Bundle 'sjl/vitality.vim'
-
-" Most recently used
 Bundle 'yegappan/mru'
-
-" Autocomplete
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/unite.vim'
-
-" Markdown syntax
+Bundle 'sjl/vitality.vim'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'ledger/vim-ledger'
+Bundle 'Valloric/YouCompleteMe'
 
 " ====================== beahavior
 filetype plugin on      "load modules by file types
@@ -88,15 +76,12 @@ if version >= 700
     map <F11> <Esc>:call ChangeSpellLang()<CR>
 endif
 
-" ====================== markdown
-let g:vim_markdown_folding_disabled=1
-
 " ====================== autocmd
 if has("autocmd")
     autocmd BufNewFile,BufRead *.markdown set wrap
 endif
 
-" ====================== Show “invisible” characters
+" ====================== show “invisible” characters
 set lcs=tab:▸\ ,trail:·
 set list
 
@@ -109,4 +94,11 @@ if &term =~ '^screen'
 	execute "set <xLeft>=\e[1;*D"
 endif
 
-autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+" ====================== ledger
+let g:ledger_maxwidth = 80
+
+" ====================== markdown
+let g:vim_markdown_folding_disabled=1
+
+" ====================== YouCompleteMe
+let g:ycm_min_num_of_chars_for_completion = 1

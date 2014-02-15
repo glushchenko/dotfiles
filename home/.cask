@@ -6,6 +6,7 @@ function installcask() {
 }
 
 installcask adium
+installcask alfred
 installcask appcleaner
 installcask cheatsheet
 installcask firefox
@@ -17,7 +18,6 @@ installcask instacast
 installcask iterm2
 installcask keyboard-maestro
 installcask little-snitch
-installcask plex-media-server
 installcask sequel-pro
 installcask shiftit
 installcask shiori

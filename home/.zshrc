@@ -15,11 +15,10 @@ setopt PUSHD_TO_HOME        # blank pushd goes to home
 setopt NUMERIC_GLOB_SORT    # sort by numeric method
 setopt GLOB_COMPLETE        # completion in scp ex.
 
-bindkey "^[[H" beginning-of-line    # fn+left
-bindkey "^[[F"  end-of-line         # fn+right
-bindkey "\e[3~" delete-char         # fn+return
-bindkey "\e\e[D" backward-word      # alt+left
-bindkey "\e\e[C" forward-word       # alt+right
+bindkey "^[[1~" beginning-of-line   # fn-left
+bindkey "^[[4~" end-of-line         # fn-right
+bindkey "^[[1;5C" forward-word      # ctrl-left
+bindkey "^[[1;5D" backward-word     # ctrl-right
 
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
@@ -32,3 +31,9 @@ fi
 source ~/.zsh/iterm2.zsh
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
+
+# auto ls after cd
+function chpwd() {
+	emulate -L zsh
+	ls -a
+}
