@@ -6,12 +6,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'yegappan/mru'
-Bundle 'sjl/vitality.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'ledger/vim-ledger'
-Bundle 'Valloric/YouCompleteMe'
 
 " ====================== beahavior
 filetype plugin on      "load modules by file types
