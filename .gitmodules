@@ -4,6 +4,6 @@
 [submodule "home/.vim/bundle/vim-colors-solarized"]
 	path = home/.vim/bundle/vim-colors-solarized
 	url = http://github.com/altercation/vim-colors-solarized
-[submodule "home/.vim/bundl/vim-markdown"]
+[submodule "home/.vim/bundle/vim-markdown"]
 	path = home/.vim/bundle/vim-markdown
 	url = http://github.com/plasticboy/vim-markdown
