@@ -1,0 +1,9 @@
+session:
+  name: "common"
+  windows:
+    - name: "ssh"
+      root: "~"
+      layout: even-horizontal
+      panes:
+        - cmd: "ssh tb; cd /var/www/virtual/textbroker.ru/new/htdocs/textbroker/"
+        - cmd: "ssh first2ip; cd /var/www/virtual/2ip.ru/"

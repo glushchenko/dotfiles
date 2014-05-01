@@ -1,6 +1,9 @@
 brew update
 brew upgrade
 
+brew install tmux
+brew install reattach-to-user-namespace
+
 brew install virtualhosts.sh
 brew install aria2
 brew install git
