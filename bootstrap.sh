@@ -9,14 +9,14 @@ do
     file=`echo $full_path | cut -d'/' -f 5`
     if [[ ${ignorefiles[*]} =~ "$file" ]]
     then
-        echo "Pass $file !!!"
+		echo "$file passed (ignored file list)"
     else
-        if [ ! -h ~/.$file ]
+        if [ ! -h ~/$file ]
         then
             echo "Creating symlink for $file"
             ln -s $full_path ~/$file
         else
-            echo "Symlink already exists for $file"
+            echo "Config already exists for $file"
         fi
     fi
 done

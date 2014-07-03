@@ -15,7 +15,7 @@ filetype indent on	    "indent by file types
 set tabstop=4           " 1tab = 4space
 set shiftwidth=4        " 1shift (>>) = 4space
 set autoindent          "same indent as previous line
-"set expandtab           "spaces instead tabs
+set expandtab           "spaces instead tabs
 set hidden              "hidden buffer instead close
 set clipboard=unnamed	" copy paste tmux
 
