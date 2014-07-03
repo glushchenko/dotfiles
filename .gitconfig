@@ -1,0 +1,11 @@
+[user]
+	name = Oleksandr Glushchenko
+	email = contact@fluder.co
+[http]
+	sslVerify = false
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

@@ -1,0 +1,13 @@
+session:
+  name: "common"
+  windows:
+    - name: "micropress"
+      root: "~/Dropbox/Apps/Micropress/sources/posts"
+      layout: even-horizontal
+      panes:
+        - cmd: "ls -la"
+        - cmd: "ls -la"
+    - name: "ripley"
+      layout: tiled
+      panes:
+        - cmd: "tmux-ripley"
