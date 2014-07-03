@@ -2,9 +2,9 @@ export LANG=ru
 export LC_ALL=ru_RU.UTF-8
 export EDITOR="vim"
 
-autoload -U colors zcalc compinit && compinit -u
+autoload -U colors zcalc compinit
 
-colors 
+colors
 compinit
 
 PS1="%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$ "
@@ -27,10 +27,5 @@ fi
 
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
-source ~/.zsh/z.sh
-
-# auto ls after cd
-function chpwd() {
-	emulate -L zsh
-	ls -a
-}
+source ~/.zsh/functions.zsh
+source ~/.bin/z/z.sh
