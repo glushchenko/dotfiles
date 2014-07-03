@@ -4,7 +4,7 @@ dotfiles
 ## Install
 
 git clone git@github.com:glushchenko/dotfiles.git .dotfiles  
-./bootstrap.sh
+cd .dotfiles && ./bootstrap.sh
 
 ## Vim
 
