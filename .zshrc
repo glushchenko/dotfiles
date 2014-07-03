@@ -27,6 +27,7 @@ fi
 
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
+source ~/.zsh/autojump.zsh
 
 # auto ls after cd
 function chpwd() {
