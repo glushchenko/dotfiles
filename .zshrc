@@ -2,7 +2,7 @@ export LANG=ru
 export LC_ALL=ru_RU.UTF-8
 export EDITOR="vim"
 
-autoload -U colors zcalc compinit 
+autoload -U colors zcalc compinit && compinit -u
 
 colors 
 compinit
@@ -27,7 +27,7 @@ fi
 
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
-source ~/.zsh/autojump.zsh
+source ~/.zsh/z.sh
 
 # auto ls after cd
 function chpwd() {
