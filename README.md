@@ -1,9 +1,12 @@
 dotfiles
 ========
 
-## submodules
+## Install
 
-cd ~/.homesick/repos/dotfiles/  
-git submodule add <remote_repository> <path/to/submodule>  
-git submodule init  
-git submodule update  
+git clone git@github.com:glushchenko/dotfiles.git .dotfiles
+git submodule init 
+git submodule update
+
+## Vim
+
+:BundleInstall
