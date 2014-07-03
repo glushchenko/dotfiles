@@ -28,7 +28,6 @@ if [[ -r ~/.zshenv ]]; then
     source ~/.zshenv
 fi
 
-source ~/.zsh/iterm2.zsh
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
 
