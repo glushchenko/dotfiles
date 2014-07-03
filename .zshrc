@@ -20,9 +20,6 @@ bindkey "^[[4~" end-of-line         # fn-right
 bindkey "^[[1;5C" forward-word      # ctrl-left
 bindkey "^[[1;5D" backward-word     # ctrl-right
 
-# autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
 # env if exist
 if [[ -r ~/.zshenv ]]; then
     source ~/.zshenv
