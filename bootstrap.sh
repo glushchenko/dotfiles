@@ -22,3 +22,9 @@ do
 done
  
 echo "Finished creating symlinks."
+
+# update submodules
+git submodule init
+git submodule update
+
+echo "Submodules updated."
