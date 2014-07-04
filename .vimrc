@@ -18,6 +18,7 @@ set autoindent          "same indent as previous line
 set expandtab           "spaces instead tabs
 set hidden              "hidden buffer instead close
 set clipboard=unnamed	" copy paste tmux
+set noswapfile          " disable swp files
 
 " ====================== visual
 syntax on	            "syntax highlighter
