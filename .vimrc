@@ -12,13 +12,16 @@ Bundle 'plasticboy/vim-markdown'
 " ====================== beahavior
 filetype plugin on      "load modules by file types
 filetype indent on	    "indent by file types
-set tabstop=4           " 1tab = 4space
-set shiftwidth=4        " 1shift (>>) = 4space
+set tabstop=4           "1tab = 4space
+set shiftwidth=4        "1shift (>>) = 4space
 set autoindent          "same indent as previous line
 set expandtab           "spaces instead tabs
 set hidden              "hidden buffer instead close
-set clipboard=unnamed	" copy paste tmux
-set noswapfile          " disable swp files
+set clipboard=unnamed   "copy paste tmux
+set noswapfile          "disable swp files (proper edit)
+set nowritebackup
+set textwidth=80        "default textwidth
+set modeline
 
 " ====================== visual
 syntax on	            "syntax highlighter
@@ -51,7 +54,7 @@ if &term =~ "xterm.*"
     cmap <Esc>[201~ <nop>
 endif
 
-" ====================== spell (ctrl + F11) 
+" ====================== spell (ctrl + F9) 
 if version >= 700
     setlocal spell spelllang=
     setlocal nospell
@@ -70,12 +73,7 @@ if version >= 700
     endfunc
 
     " map spell on/off for English/Russian
-    map <F11> <Esc>:call ChangeSpellLang()<CR>
-endif
-
-" ====================== autocmd
-if has("autocmd")
-    autocmd BufNewFile,BufRead *.markdown set wrap
+    map <F9> <Esc>:call ChangeSpellLang()<CR>
 endif
 
 " ====================== show “invisible” characters
