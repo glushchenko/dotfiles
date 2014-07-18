@@ -19,9 +19,10 @@ set expandtab           "spaces instead tabs
 set hidden              "hidden buffer instead close
 set clipboard=unnamed   "copy paste tmux
 set noswapfile          "disable swp files (proper edit)
-set nowritebackup
+set nowritebackup       "disable backup files (proper edit)
 set textwidth=80        "default textwidth
-set modeline
+set modeline            "use modeline settings if exist
+set backspace=2         "make backspace work like most other apps
 
 " ====================== visual
 syntax on	            "syntax highlighter
