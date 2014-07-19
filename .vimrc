@@ -98,3 +98,6 @@ let g:vim_markdown_folding_disabled=1
 
 " ====================== YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 1
+
+" ====================== Disable .netrwhist
+let g:netrw_dirhistmax = 0
