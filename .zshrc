@@ -1,6 +1,9 @@
 export LANG=ru
 export LC_ALL=ru_RU.UTF-8
 export EDITOR="vim"
+export HISTSIZE=2000
+export SAVEHIST=2000
+export HISTFILE="$HOME/.zsh_history"
 
 autoload -U colors zcalc compinit
 
@@ -14,6 +17,13 @@ setopt CORRECT              # Spell check commands!  (Sometimes annoying)
 setopt PUSHD_TO_HOME        # blank pushd goes to home
 setopt NUMERIC_GLOB_SORT    # sort by numeric method
 setopt GLOB_COMPLETE        # completion in scp ex.
+
+# history
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
 
 bindkey "^[[1~" beginning-of-line   # fn-left
 bindkey "^[[4~" end-of-line         # fn-right
