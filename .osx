@@ -4,16 +4,8 @@ sudo nvram SystemAudioVolume=" "
 # change shell
 chsh -s /bin/zsh
 
-# en-US localization for Safari.app
-defaults write com.apple.Safari AppleLanguages '("en-US")'
-
-# disable auto sign gpg Mail.app
+# disable auto sign gpg mail.app
 defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool NO
-
-# disable spotlight
-sudo mdutil -a -i off
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-killall SystemUIServer
 
 # disable auto reopen
 defaults write -g ApplePersistence -bool no
