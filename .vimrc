@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'mrtazz/vim-stencil'
 
 " ====================== beahavior
 filetype plugin on      "load modules by file types
@@ -101,3 +102,6 @@ let g:ycm_min_num_of_chars_for_completion = 1
 
 " ====================== Disable .netrwhist
 let g:netrw_dirhistmax = 0
+
+" ====================== Stencil
+let g:StencilTemplatepath = "~/.vim/templates/"
