@@ -78,10 +78,6 @@ if version >= 700
     map <F9> <Esc>:call ChangeSpellLang()<CR>
 endif
 
-" ====================== show “invisible” characters
-set lcs=tab:▸\ ,trail:·
-set list
-
 " ====================== tmux arrows working properly
 if &term =~ '^screen'
 	" tmux will send xterm-style keys when xterm-keys is on
