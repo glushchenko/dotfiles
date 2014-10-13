@@ -1,13 +1,19 @@
 [user]
-	name = Oleksandr Glushchenko
-	email = contact@fluder.co
+	name = 
+	email = 
 [http]
 	sslVerify = false
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/fluder/.gitignore_global
 	autocrlf = input
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [push]
 	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

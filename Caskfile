@@ -1,0 +1,24 @@
+# Install native apps
+# Usage: `brew bundle Caskfile`
+
+install caskroom/cask/brew-cask
+tap caskroom/versions
+
+cask install firefox 2> /dev/null
+cask install imageoptim 2> /dev/null
+cask install the-unarchiver 2> /dev/null
+cask install transmission 2> /dev/null
+cask install virtualbox 2> /dev/null
+cask install sequel-pro 2> /dev/null
+cask install skype 2> /dev/null
+cask install vlc 2> /dev/null
+cask install intellij-idea 2> /dev/null
+cask install gpgtools 2> /dev/null
+cask install sopcast 2> /dev/null
+cask install bettertouchtool 2> /dev/null
+cask install keyboard-maestro 2> /dev/null
+cask install sublime-text3 2> /dev/null
+cask install arq 2> /dev/null
+cask install sourcetree 2> /dev/null
+cask install little-snitch 2> /dev/null
+cask install alfred 2> /dev/null

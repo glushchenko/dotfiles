@@ -3,8 +3,7 @@ brew upgrade
 
 brew install tmux
 brew install reattach-to-user-namespace
-
-brew install virtualhosts.sh
-brew install aria2
 brew install git
-brew install htop
+brew install minidlna
+brew install vim
+brew install dnsmasq
