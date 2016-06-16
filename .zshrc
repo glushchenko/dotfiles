@@ -38,4 +38,3 @@ fi
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
-source ~/.bin/z/z.sh

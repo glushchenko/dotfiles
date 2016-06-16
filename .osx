@@ -9,3 +9,7 @@ defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault
 
 # disable auto reopen
 defaults write -g ApplePersistence -bool no
+
+# Default screenshots
+defaults write com.apple.screencapture location ~/Pictures/Screenshots
+killall SystemUIServerkillall SystemUIServer
