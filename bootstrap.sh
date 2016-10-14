@@ -8,8 +8,14 @@ if [ -z $1 ]; then
     files=$DOTFILES_DIR.*
     echo "All configs prepared for install."
 else
+    if [ -f "$1" ]
+    then    
+        lines=`cat $1`
+    else
+        lines=`cat $DOTFILES_DIR/bundle.$1`
+    fi
+
     bundleLinks=()
-    lines=`cat $DOTFILES_DIR/bundle.$1`
     for line in $lines; do
         bundleLinks+=("$DOTFILES_DIR$line");
     done
