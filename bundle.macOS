@@ -1,5 +1,7 @@
 .gitconfig
 .microrc
+.vim
+.vimrc
 .tmux.conf
 .zsh
 .zshrc

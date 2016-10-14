@@ -1,7 +1,7 @@
 #!/bin/bash
 # script to symlink files in ~/.dotfiles to the home directory
 
-IGNORE_LINK=(".gitignore" ".gitmodules")
+IGNORE_LINK=(".git" ".gitignore" ".gitmodules")
 DOTFILES_DIR="$HOME/.dotfiles/"
 
 if [ -z $1 ]; then
