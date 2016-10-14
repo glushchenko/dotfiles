@@ -21,7 +21,7 @@ set hidden              "hidden buffer instead close
 set clipboard=unnamed   "copy paste tmux
 set noswapfile          "disable swp files (proper edit)
 set nowritebackup       "disable backup files (proper edit)
-set textwidth=80        "default textwidth
+set textwidth=0         "default textwidth
 set modeline            "use modeline settings if exist
 set backspace=2         "make backspace work like most other apps
 
