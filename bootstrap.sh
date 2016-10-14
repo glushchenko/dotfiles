@@ -3,13 +3,29 @@
 
 IGNORE_LINK=(".git" ".gitignore" ".gitmodules")
 DOTFILES_DIR="$HOME/.dotfiles/"
+BUNDLE_DIR="bundle/"
 
 if [ -z $1 ]; then
     files=$DOTFILES_DIR.*
     echo "All configs prepared for install."
 else
+    # reading linked list
+    if [ -f "$1" ]
+    then    
+        BUNDLE_FULL_PATH=$1  
+    else
+        BUNDLE_FULL_PATH=$DOTFILES_DIR$BUNDLE_DIR$1
+    fi
+
+    lines=`cat $BUNDLE_FULL_PATH`
+
+    # execute same name sh script if exist
+    if [ -f "$BUNDLE_FULL_PATH.sh" ]
+    then
+        source $BUNDLE_FULL_PATH.sh 
+    fi  
+
     bundleLinks=()
-    lines=`cat $DOTFILES_DIR/bundle.$1`
     for line in $lines; do
         bundleLinks+=("$DOTFILES_DIR$line");
     done
