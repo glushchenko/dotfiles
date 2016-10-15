@@ -3,5 +3,6 @@
 .vim
 .vimrc
 .tmux.conf
+.tmux.macOS.conf
 .zsh
 .zshrc
