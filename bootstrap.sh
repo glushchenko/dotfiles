@@ -11,8 +11,8 @@ if [ -z $1 ]; then
 else
     # reading linked list
     if [ -f "$1" ]
-    then    
-        BUNDLE_FULL_PATH=$1  
+    then
+        BUNDLE_FULL_PATH=$1
     else
         BUNDLE_FULL_PATH=$DOTFILES_DIR$BUNDLE_DIR$1
     fi
@@ -22,8 +22,8 @@ else
     # execute same name sh script if exist
     if [ -f "$BUNDLE_FULL_PATH.sh" ]
     then
-        source $BUNDLE_FULL_PATH.sh 
-    fi  
+        source $BUNDLE_FULL_PATH.sh
+    fi
 
     bundleLinks=()
     for line in $lines; do
