@@ -1,14 +1,20 @@
+# checking .cache direcory for declutter home
+CACHE="$HOME/.cache/zsh"
+if [[ ! -d ~/.cache/zsh ]]; then
+    CACHE="$HOME"
+fi    
+
 export LANG=ru
 export LC_ALL=ru_RU.UTF-8
 export EDITOR="vim"
 export HISTSIZE=2000
 export SAVEHIST=2000
-export HISTFILE="$HOME/.cache/zsh/.zsh_history"
+export HISTFILE="~/.cache/zsh/.zsh_history"
 
 autoload -U colors zcalc compinit
 
 colors
-compinit -d ~/.cache/zsh/.zcompdump
+compinit -d "$CACHE/.zcompdump"
 
 PS1="%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$ "
 
