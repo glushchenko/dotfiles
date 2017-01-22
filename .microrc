@@ -7,15 +7,26 @@ post_per_page = 10
 exclude_category = How-to
 
 [storage]
-build = /tmp/micropress
-public = ~/Documents/Apps/Micropress/public
-templates = ~/Documents/Apps/Micropress/templates
-pages = ~/Documents/Apps/Micropress/sources/pages
-posts = ~/Documents/Apps/Micropress/sources/posts
+cache = ~/.cache/micropress
+build = ~/src/glushchenko.github.io
+public = ~/Documents/Blog/public
+templates = ~/Documents/Blog/templates
+pages = ~/Documents/Blog/sources/pages
+posts = ~/Documents/Blog/sources/posts
 
 [sync]
-to = ripley.fluder.co:/var/www/fluder.co/public_html
+type = git
+key = ~/.ssh/id_rsa
 
 [locale]
 month = Января, Февраля, Марта, Апреля, Мая, Июня, Июля, Августа, Сентября, Октября, Ноября, Декабря
 days = Пн, Вт, Ср, Чт, Пт, Сб, Вс
+
+[meta]
+like = Всё что мне пришлось по вкусу: музыка, фильмы, книги, гаджеты и т.д
+engineering = Раздел о разработке программного обеспечения, методологии, хорошие практики, домашние проекты.
+macintosh = Компьютеры Apple, операционная система OS X и програмное обеспечение для маков.
+ios = Мобильная операционная система от Apple, обзор приложений, homescreen, мысли и лайфхаки.
+cli = Приложения, которые работают в командной строке и необходимы каждому разработчику.
+things = Разные мысли на IT темы и близкие к ним. Посты размышлений и ненависти к разным продуктам и компаниям.
+archive = Посты из старого блога, история fluder.co

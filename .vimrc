@@ -24,6 +24,7 @@ set nowritebackup       "disable backup files (proper edit)
 set textwidth=0         "default textwidth
 set modeline            "use modeline settings if exist
 set backspace=2         "make backspace work like most other apps
+set viminfo="NONE"
 
 " ====================== visual
 syntax on	            "syntax highlighter

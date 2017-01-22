@@ -3,12 +3,12 @@ export LC_ALL=ru_RU.UTF-8
 export EDITOR="vim"
 export HISTSIZE=2000
 export SAVEHIST=2000
-export HISTFILE="$HOME/.zsh_history"
+export HISTFILE="$HOME/.cache/zsh/.zsh_history"
 
 autoload -U colors zcalc compinit
 
 colors
-compinit
+compinit -d ~/.cache/zsh/.zcompdump
 
 PS1="%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$ "
 
@@ -34,6 +34,11 @@ bindkey "^[[1;5D" backward-word     # ctrl-right
 if [[ -r ~/.zshenv ]]; then
     source ~/.zshenv
 fi
+
+# tmux autostart
+if [ -z $TMUX ]; then; 
+    tmux attach || tmux new;
+fi  
 
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
