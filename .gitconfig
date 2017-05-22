@@ -1,6 +1,6 @@
 [user]
 	name = Oleksandr Glushchenko 
-	email = contact@fluder.co
+	email = fluder@gmail.com
 [http]
 	sslVerify = false
 [core]
@@ -10,7 +10,7 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [push]
-	default = simple
+	default = current
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f

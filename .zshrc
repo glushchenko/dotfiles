@@ -16,8 +16,6 @@ autoload -U colors zcalc compinit
 colors
 compinit -d "$CACHE/.zcompdump"
 
-PS1="%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$ "
-
 setopt AUTO_CD              # why would you type 'cd dir' if you could just type 'dir'?
 setopt CORRECT              # Spell check commands!  (Sometimes annoying)
 setopt PUSHD_TO_HOME        # blank pushd goes to home
@@ -49,3 +47,6 @@ fi
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
+source ~/.zsh/git-prompt/git-prompt.sh
+
+PROMPT='%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$(git_super_status)$ '

@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'mrtazz/vim-stencil'
+Bundle 'airblade/vim-gitgutter'
 
 " ====================== beahavior
 filetype plugin on      "load modules by file types

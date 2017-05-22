@@ -1,4 +1,5 @@
 .gitconfig
+.gitignore_global
 .microrc
 .vim
 .vimrc
