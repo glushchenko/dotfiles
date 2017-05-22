@@ -47,6 +47,6 @@ fi
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
-source ~/.zsh/git-prompt/git-prompt.sh
+source ~/.zsh/git-prompt/git-prompt.zsh
 
 PROMPT='%{$fg[green]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%{$fg_bold[white]%}%~%{$reset_color%}$(git_super_status)$ '
