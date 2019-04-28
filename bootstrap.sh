@@ -37,7 +37,10 @@ successLinkedQty=0
 
 for linkedPath in $files
 do
-    file=`echo $linkedPath | cut -d'/' -f 5`
+    slash=`echo $linkedPath | tr -cd '/' | wc -c`
+    ((slash+=1))
+    
+    file=`echo $linkedPath | cut -d'/' -f $slash`
     if [[ ${IGNORE_LINK[*]} =~ "$file" ]]
     then
 		echo "$file passed (ignored file list)"
