@@ -4,8 +4,8 @@ if [[ ! -d ~/.cache/zsh ]]; then
     CACHE="$HOME"
 fi    
 
-export LANG=ru
-export LC_ALL=ru_RU.UTF-8
+export LANG=en
+export LC_ALL=en_US.UTF-8
 export EDITOR="vim"
 export HISTSIZE=2000
 export SAVEHIST=2000
