@@ -15,5 +15,7 @@ then
     brew install reattach-to-user-namespace
     brew install vim
     brew install dnsmasq
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
