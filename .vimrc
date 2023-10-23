@@ -26,6 +26,7 @@ set textwidth=0         "default textwidth
 set modeline            "use modeline settings if exist
 set backspace=2         "make backspace work like most other apps
 set viminfo="NONE"
+set paste               "https://stackoverflow.com/questions/2514445/turning-off-auto-indent-when-pasting-text-into-vim
 
 " ====================== visual
 syntax on	            "syntax highlighter
