@@ -1,10 +1,8 @@
 .gitconfig
 .gitignore_global
-.microrc
 .vim
 .vimrc
 .tmux.conf
 .tmux.macOS.conf
 .zsh
 .zshrc
-.aria2
