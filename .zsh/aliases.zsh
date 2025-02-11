@@ -1,5 +1,1 @@
 alias ls='ls -vFlaG'
-alias dev-env-start='brew services start mysql; brew services start php56; brew services start nginx;'
-alias dev-env-stop='brew services stop mysql; brew services stop php56; brew services stop nginx;'
-alias ashow='chmod 777 /Volumes/The\ Dump/.archive; killall minidlnad; open /Volumes/The\ Dump/.archive'
-alias ahide='chmod 000 /Volumes/The\ Dump/.archive; killall minidlnad'
